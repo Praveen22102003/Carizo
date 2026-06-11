@@ -1,54 +1,50 @@
 .register-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 25px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #fafafa;
+  max-width: 480px;
+  margin: 4.5rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
 }
 
 .register-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
   text-align: center;
-  margin-bottom: 20px;
+  color: #f4f8ff;
 }
 
 .register-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  gap: 1rem;
 }
 
-.register-container input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+.register-container input,
+.register-container select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  color: #eef2ff;
 }
 
 .register-container button {
-  padding: 12px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #5ac8ff, #2f7bed);
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .register-container button:hover {
-  background-color: #0056b3;
+  filter: brightness(1.03);
 }
 
 .register-container p {
-  margin-top: 15px;
+  margin-top: 1rem;
   text-align: center;
-  color: green;
+  color: #b0c4e8;
 }
-.register-container select {
-  padding: 10px;
-  margin-bottom: 15px;
-  width: 100%;
-  font-size: 16px;
-}
-

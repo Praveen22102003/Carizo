@@ -1,139 +1,147 @@
 .product-list {
-  padding: 40px;
-  background-color: #f9f9f9;
+  padding: 0;
 }
 
 .product-list h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #333;
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+  color: #f8fbff;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px; /* space between items */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
 }
 
 .product-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
+  border-color: rgba(78, 168, 255, 0.5);
+  box-shadow: 0 24px 54px rgba(30, 80, 180, 0.14);
 }
 
-.product-card img {
+.product-image {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(0, 0, 0, 0.08)
+  );
 }
 
 .product-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin: 0 0 0.75rem;
+  color: #eef2ff;
 }
 
 .product-card p {
+  margin: 0.3rem 0;
+  color: #b7c4e6;
   font-size: 0.95rem;
-  margin: 5px 0;
-  color: #555;
 }
 
-/* Delete button styles */
+.product-card strong {
+  display: block;
+  margin-top: 0.65rem;
+  color: #84dfff;
+  font-size: 1.05rem;
+}
+
+.delete-button,
+.add-to-cart-button,
+.go-to-cart-button {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
 .delete-button {
-  background-color: #d9534f;
-  border: none;
-  padding: 8px 12px;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff7a83;
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .delete-button:hover {
-  background-color: #c9302c;
+  background: rgba(255, 255, 255, 0.12);
 }
+
 .add-to-cart-button {
-  background-color: #28a745;  /* green */
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #5ac8ff, #3584ff);
+  color: #fff;
 }
 
 .add-to-cart-button:hover {
-  background-color: #218838;
+  transform: translateY(-1px);
 }
 
-/* New styles for Go To Cart button */
 .go-to-cart-button {
-  background-color: #007bff; /* blue */
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #6ff3b0, #32b768);
+  color: #fff;
 }
 
 .go-to-cart-button:hover {
-  background-color: #0056b3;
+  opacity: 0.97;
 }
+
 .modal-overlay {
+  background: rgba(11, 14, 27, 0.8);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 1200;
 }
 
 .modal {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  width: min(420px, 90%);
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: rgba(10, 14, 28, 0.98);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+  color: #fff;
 }
 
 .modal-actions {
-  margin-top: 15px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   justify-content: center;
-  gap: 10px;
+  margin-top: 1.25rem;
 }
 
 .modal-actions button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+  flex: 1;
+  min-width: 120px;
+  padding: 0.95rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 .modal-actions button:first-child {
-  background-color: red;
+  background: #ff5f74;
   color: white;
 }
 
 .modal-actions button:last-child {
-  background-color: #ccc;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e8f1ff;
 }

@@ -1,89 +1,63 @@
-/* Define CSS variables for light and dark themes */
-:root {
-  --bg-color: #f8f9fa;
-  --container-bg: linear-gradient(to right, #f8f9fa, #e9ecef);
-  --text-color: #2c3e50;
-  --table-bg: #ffffff;
-  --table-header-bg: #0069d9;
-  --table-header-text: #fff;
-  --table-row-hover: #f1faff;
-  --border-color: #dee2e6;
-  --delete-btn-bg: #e74c3c;
-  --delete-btn-hover-bg: #c0392b;
-}
-
-.dark-theme {
-  --bg-color: #121212;
-  --container-bg: linear-gradient(to right, #1f1f1f, #121212);
-  --text-color: #e0e0e0;
-  --table-bg: #1e1e1e;
-  --table-header-bg: #0d6efd;
-  --table-header-text: #e9ecef;
-  --table-row-hover: #2a2a2a;
-  --border-color: #333333;
-  --delete-btn-bg: #d9534f;
-  --delete-btn-hover-bg: #b34244;
-}
-
-/* Base styles */
 .category-list-container {
-  margin: 30px auto;
-  max-width: 900px;
-  padding: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--container-bg);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+  color: #f4f7ff;
 }
 
 .category-list-container h2 {
   text-align: center;
-  margin-bottom: 24px;
-  font-size: 28px;
-  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #f7f9ff;
 }
 
 .category-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--table-bg);
-  border-radius: 8px;
+  background: transparent;
+  border-radius: 16px;
   overflow: hidden;
 }
 
 .category-table th,
 .category-table td {
-  padding: 14px 18px;
+  padding: 1rem 1.1rem;
   text-align: left;
-  border-bottom: 1px solid var(--border-color);
-  color: var(--text-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d9e1ff;
 }
 
 .category-table th {
-  background-color: var(--table-header-bg);
-  color: var(--table-header-text);
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f5f9ff;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
-.category-table tr:hover {
-  background-color: var(--table-row-hover);
+.category-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .delete-btn {
-  background-color: var(--delete-btn-bg);
+  background: rgba(255, 107, 107, 0.95);
   color: #fff;
-  padding: 6px 14px;
+  padding: 0.65rem 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .delete-btn:hover {
-  background-color: var(--delete-btn-hover-bg);
+  background: rgba(255, 70, 70, 1);
+  transform: translateY(-1px);
 }

@@ -44,7 +44,7 @@ const ProfilePage = () => {
 
     formData.append(
       "user",
-      new Blob([JSON.stringify(userPayload)], { type: "application/json" })
+      new Blob([JSON.stringify(userPayload)], { type: "application/json" }),
     );
 
     if (imageFile) formData.append("image", imageFile);
@@ -137,15 +137,19 @@ const ProfilePage = () => {
             </button>
           </form>
         ) : (
-          <>
+          <div className="profile-info">
             <p>
-              <strong>Name:</strong> {userData.username}
+              <strong>Name:</strong>{" "}
+              <span className="profile-field-value">{userData.username}</span>
             </p>
             <p>
-              <strong>Email:</strong> {userData.email}
+              <strong>Email:</strong>{" "}
+              <span className="profile-field-value">{userData.email}</span>
+              <button className="edit-btn" onClick={() => setEditMode(true)}>
+                Edit
+              </button>
             </p>
-            <button onClick={() => setEditMode(true)}>Edit</button>
-          </>
+          </div>
         )}
       </div>
     </div>

@@ -1,29 +1,30 @@
 .orders-page {
-  padding: 40px 20px;
-  max-width: 700px;
-  margin: 60px auto;
-  border-radius: 25px;
-  box-shadow: 0 25px 50px rgba(255, 165, 79, 0.25);
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff; /* white background for page */
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
 }
 
 .orders-page h2 {
-  display: inline-block; /* shrink to text size */
-  background-color: #fff3e0; /* warm peach background behind text only */
-  color: #ff7f11; /* bright orange text */
-  font-size: 32px;
-  padding: 10px 30px;
-  border-radius: 15px;
-  font-weight: 800;
-  text-shadow: 1px 1px 3px #ffa54f99;
-  margin-bottom: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(90, 200, 255, 0.18),
+    rgba(78, 168, 255, 0.18)
+  );
+  color: #84dfff;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .orders-page p {
-  color: #d35400; /* deeper orange */
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 30px;
+  color: #b8c4e2;
+  font-size: 1.05rem;
+  text-align: center;
+  margin: 1.5rem 0;
 }

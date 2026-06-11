@@ -1,96 +1,203 @@
 .profile-page {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 30px;
-  background: #ffffff;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.profile-page:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.3);
 }
 
 .profile-page h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
-  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  background: linear-gradient(135deg, #5ac8ff, #a7d8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
 }
 
+/* ✅ Fixed: single column, centered layout */
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.2rem;
 }
 
 .profile-avatar-large {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #6c63ff;
-  margin-bottom: 20px;
-  transition: transform 0.3s;
+  border: 5px solid rgba(90, 200, 255, 0.5);
+  box-shadow:
+    0 16px 40px rgba(19, 98, 176, 0.35),
+    0 0 30px rgba(90, 200, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite;
 }
 
 .profile-avatar-large:hover {
   transform: scale(1.05);
+  box-shadow:
+    0 20px 50px rgba(19, 98, 176, 0.45),
+    0 0 40px rgba(90, 200, 255, 0.3);
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ✅ Fixed: Name and Email info block */
+.profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ✅ Fixed: Each field row properly aligned */
+.profile-card p {
+  color: #d4d9f4;
+  margin: 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-card p strong {
+  color: #5ac8ff;
+  font-weight: 700;
+  min-width: 70px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.profile-field-value {
+  flex: 1;
+  color: #eef1ff;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ✅ Edit button */
+.edit-btn {
+  background: linear-gradient(135deg, #5ac8ff, #2f7bed);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(90, 200, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.edit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.4s ease;
+}
+
+.edit-btn:hover::before { left: 100%; }
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(90, 200, 255, 0.4);
+  background: linear-gradient(135deg, #6fd4ff, #3d85ff);
+}
+
+.edit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(90, 200, 255, 0.3);
+}
+
+/* ✅ Form inputs */
 .profile-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.8rem;
   width: 100%;
 }
 
 .profile-form input[type="text"],
 .profile-form input[type="email"],
 .profile-form input[type="file"] {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  font-size: 16px;
-  transition: border-color 0.3s;
+  padding: 0.9rem 1.2rem;
+  color: #eef1ff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .profile-form input:focus {
-  border-color: #6c63ff;
+  border-color: rgba(90, 200, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(90, 200, 255, 0.15);
   outline: none;
 }
 
 .profile-form button {
-  padding: 12px;
-  background: #6c63ff;
-  color: white;
+  width: 100%;
+  background: linear-gradient(135deg, #5ac8ff, #2f7bed);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
-  border-radius: 12px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(90, 200, 255, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .profile-form button:hover {
-  background: #574bff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(90, 200, 255, 0.45);
 }
 
-.profile-card p {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #444;
+.profile-form button:active {
+  transform: translateY(0);
 }
 
-.profile-card button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.profile-card button:hover {
-  background-color: #574bff;
+.access-denied {
+  color: #ff6b6b;
+  font-weight: 600;
+  text-align: center;
 }

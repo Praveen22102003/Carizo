@@ -2,51 +2,68 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 2rem;
 }
 
 .checkout-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 300px;
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+}
+
+.checkout-form h2 {
+  color: #f7f9ff;
+  margin-bottom: 1rem;
 }
 
 .checkout-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  color: #eef3ff;
+}
+
+.checkout-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.checkout-form input:focus {
+  border-color: rgba(78, 168, 255, 0.75);
+  box-shadow: 0 0 0 4px rgba(78, 168, 255, 0.12);
 }
 
 .checkout-form button {
-  background-color: #28a745;
-  color: white;
-  font-weight: bold;
-  padding: 12px;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #5ac8ff, #2f7bed);
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .checkout-form button:hover {
-  background-color: #218838;
+  filter: brightness(1.05);
 }
 
 .error {
-  color: red;
-  font-weight: bold;
-  margin-top: 10px;
+  color: #ff7a7a;
+  font-weight: 600;
 }
 
 .order-summary {
-  margin-top: 20px;
-  background-color: #e9ecef;
-  padding: 15px;
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1.25rem;
   text-align: center;
+  color: #d8e0ff;
 }

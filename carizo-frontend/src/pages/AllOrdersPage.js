@@ -33,7 +33,11 @@ const AllOrdersPage = () => {
     <div className="orders-container">
       <h2>All Orders</h2>
       {orders.length === 0 ? (
-        <p>No orders found.</p>
+        <div className="no-orders-container">
+          <span className="no-orders-icon">🛍️</span>
+          <h3>No Orders Yet</h3>
+          <p>No orders have been placed yet.</p>
+        </div>
       ) : (
         <table className="orders-table">
           <thead>

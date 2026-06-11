@@ -1,25 +1,22 @@
-/* src/styles/Home.css */
-
 .home {
-  background-color: #121212;
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0.1rem;
-  min-height: 100vh;
+  padding: 2rem 0;
+  color: #f4f7ff;
 }
 
 .home h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  color: #ffcc00; /* gold accent */
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.04em;
+  color: #fff;
 }
 
 .home p {
   text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #aaa;
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  color: #c8d1eb;
+  font-size: 1.1rem;
 }
 
 .product-section {
@@ -50,12 +47,11 @@
   color: #fff;
 }
 
-
 /* Headings for sections */
 .product-section h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Product grid inherited from ProductList.css */
@@ -71,7 +67,9 @@
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   color: #eee;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -165,7 +163,7 @@
 .product-section button {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #007bff;   /* Bootstrap-like blue */
+  background-color: #007bff; /* Bootstrap-like blue */
   color: white;
   border: none;
   border-radius: 4px;
@@ -219,14 +217,16 @@
   text-align: center;
   border-radius: 10px;
   padding: 0.7rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 8px rgba(0,0,0,0.12);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
   background-color: #f9f9f9;
   user-select: none;
 }
 
 .category-item:hover {
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   transform: translateY(-6px);
 }
 
@@ -243,23 +243,23 @@
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;  /* circular shape */
+  border-radius: 50%; /* circular shape */
   margin-bottom: 0.7rem;
   border: 2px solid #ddd;
   transition: border-color 0.3s ease;
 }
 
 .category-item:hover .category-name {
-  color: #0056b3;              /* darker blue on hover */
+  color: #0056b3; /* darker blue on hover */
   text-decoration: underline;
 }
 
 /* Category name text - tweaked colors and sizing */
 .category-name {
   font-weight: 700;
-  font-size: 1.2rem;           /* slightly bigger */
-  color: #1e90ff;              /* bright blue color */
-  text-transform: capitalize;  /* capitalize each word */
+  font-size: 1.2rem; /* slightly bigger */
+  color: #1e90ff; /* bright blue color */
+  text-transform: capitalize; /* capitalize each word */
   letter-spacing: 0.05em;
   user-select: none;
   transition: color 0.3s ease;
@@ -277,5 +277,3 @@
   color: #444;
   font-weight: 500;
 }
-
-
