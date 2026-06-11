@@ -1,0 +1,70 @@
+/* OrderCard.css */
+
+.order-card {
+  background: #fffbf2; /* soft warm background */
+  border-radius: 20px;
+  padding: 30px 35px;
+  max-width: 520px;
+  margin: 50px auto;
+  box-shadow: 0 20px 40px rgba(255, 165, 79, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease-out;
+  border: 3px solid #ffa54f;
+}
+
+.order-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px rgba(255, 165, 79, 0.5);
+}
+
+.order-card h4 {
+  color: #ff7f11; /* bright orange */
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #ffa54f99;
+}
+
+.order-card p {
+  font-size: 18px;
+  color: #d35400; /* deeper orange */
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.order-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.order-card li {
+  font-size: 17px;
+  color: #2c3e50; /* dark slate */
+  background-color: #ffe8cc; /* pale orange background */
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  box-shadow: 0 3px 8px rgba(255, 165, 79, 0.25);
+  font-weight: 500;
+}
+
+.order-card p:last-child {
+  font-size: 20px;
+  color: #e65100; /* strong burnt orange */
+  font-weight: 700;
+  margin-top: 20px;
+  text-shadow: 0 1px 1px #ffb347aa;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

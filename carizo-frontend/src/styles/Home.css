@@ -1,0 +1,281 @@
+/* src/styles/Home.css */
+
+.home {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.1rem;
+  min-height: 100vh;
+}
+
+.home h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #ffcc00; /* gold accent */
+}
+
+.home p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.product-section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* All Products - neutral dark blue */
+.product-section.all-products {
+  background-color: #1e2a38;
+  border: 2px solid #3b5998;
+  color: #d0d9ff;
+}
+
+/* New Arrivals - vibrant purple */
+.product-section.new-arrivals {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  border: 2px solid #e040fb;
+  color: #fff;
+}
+
+/* Best Sellers - deep orange */
+.product-section.best-sellers {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: 2px solid #ff3e00;
+  color: #fff;
+}
+
+
+/* Headings for sections */
+.product-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Product grid inherited from ProductList.css */
+/* Ensure product cards stand out on different backgrounds */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Add subtle hover effect for product cards */
+.product-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  background-color: #222;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #ffcc00; /* gold accent */
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0.25rem 0;
+}
+
+.product-card strong {
+  color: #00ffae; /* neon green accent */
+  font-size: 1.1rem;
+}
+
+/* Buttons style */
+.delete-button,
+.add-to-cart-button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+/* Admin delete button */
+.delete-button {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #9b2c2c;
+}
+
+/* User add to cart button */
+.add-to-cart-button {
+  background-color: #319795;
+  color: white;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2c7a7b;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .product-card img {
+    height: 140px;
+  }
+  .home h1 {
+    font-size: 2.2rem;
+  }
+  .product-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Inside Home.css */
+.new-arrivals .product-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  display: inline-block;
+}
+/* View All / Show Less buttons */
+.product-section button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;   /* Bootstrap-like blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-section button:hover {
+  background-color: #0056b3;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.view-toggle-button {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle-button:hover {
+  background-color: #0056b3;
+}
+/* Categories container */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+/* Each category item */
+.category-item {
+  cursor: pointer;
+  width: 140px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.7rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.12);
+  background-color: #f9f9f9;
+  user-select: none;
+}
+
+.category-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transform: translateY(-6px);
+}
+
+/* Highlight selected category */
+.category-item.selected {
+  box-shadow: 0 0 16px 3px #007bff;
+  border: 2px solid #007bff;
+  transform: translateY(-4px);
+  background-color: #e6f0ff;
+}
+
+/* Category image styling - increased size */
+.category-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;  /* circular shape */
+  margin-bottom: 0.7rem;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.category-item:hover .category-name {
+  color: #0056b3;              /* darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Category name text - tweaked colors and sizing */
+.category-name {
+  font-weight: 700;
+  font-size: 1.2rem;           /* slightly bigger */
+  color: #1e90ff;              /* bright blue color */
+  text-transform: capitalize;  /* capitalize each word */
+  letter-spacing: 0.05em;
+  user-select: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Filtered products section tweaks */
+.product-section.filtered-products {
+  margin-top: 2rem;
+}
+
+/* Optional: Adjust "Please select a category" message */
+.home > p {
+  font-size: 1.15rem;
+  color: #444;
+  font-weight: 500;
+}
+
+

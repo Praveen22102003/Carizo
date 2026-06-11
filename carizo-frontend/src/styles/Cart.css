@@ -1,0 +1,100 @@
+.cart-container {
+  margin: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+.cart-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table thead {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.cart-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 0.3rem 0.6rem;
+  margin: 0 5px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+}
+
+.remove-btn:hover {
+  background-color: #b02a37;
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-top: 2px solid #ccc;
+}

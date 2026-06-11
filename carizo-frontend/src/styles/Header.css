@@ -1,0 +1,226 @@
+/* Header.css */
+
+.header {
+  background-color: #1e1e2f;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  color: #ffcc00;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+  white-space: nowrap;
+}
+
+.logout-button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: #ff5555;
+}
+.header-search-form {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header-search-input {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.header-search-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header-search-button:hover {
+  background-color: #0056b3;
+}
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  vertical-align: middle;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #3498db, #9b59b6);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(52, 152, 219, 0.6);
+}
+
+.username-text {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.username-text:hover {
+  color: #f1c40f;
+  text-shadow: 0 0 6px rgba(241, 196, 15, 0.5);
+  cursor: pointer;
+}
+/* Additional dropdown menu item style for Profile */
+.dropdown-menu li button.profile-button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 15px;
+  transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+.dropdown-menu li button.profile-button:hover {
+  background-color: #555;
+  color: #f1c40f;
+}
+
+/* Optional: slightly different style for dropdown menu container to visually separate profile and logout */
+.dropdown-menu li.separator {
+  border-top: 1px solid #444;
+  margin: 4px 0;
+  pointer-events: none;
+  height: 0;
+}
+.user-icon {
+  cursor: pointer;
+}
+/* Header.css additions */
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffd700, #ffcc33); /* gold gradient */
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.4);
+  user-select: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.25));
+  transition: filter 0.3s ease;
+}
+
+/* Hover effect to scale and add glow */
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 3px rgba(255, 215, 0, 0.8);
+}
+
+.logo:hover img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+
+
+

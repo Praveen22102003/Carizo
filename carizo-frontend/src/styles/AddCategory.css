@@ -1,0 +1,90 @@
+.add-category-container {
+  margin: 20px auto;
+  max-width: 400px;
+  font-family: Arial, sans-serif;
+}
+
+.add-category-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-category-form input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button[type="submit"] {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.buttons button[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+.buttons button[type="button"] {
+  background-color: #d9534f;
+  color: white;
+}
+
+.buttons button[type="button"]:hover {
+  background-color: #c9302c;
+}
+.access-denied {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+/* Hide default file input */
+#imageUpload {
+  display: none;
+}
+
+/* Style for the label wrapping the image preview or placeholder */
+.add-category-container form label[for="imageUpload"] {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Image preview styling */
+.add-category-container form label[for="imageUpload"] img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+/* Placeholder box if no image */
+.add-category-container form label[for="imageUpload"] div {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  user-select: none;
+}

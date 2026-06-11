@@ -1,0 +1,25 @@
+.search-results-container {
+  padding: 20px;
+}
+
+.search-results-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.loading-text {
+  padding: 20px;
+  font-style: italic;
+  color: #666;
+}
+
+.error-text {
+  padding: 20px;
+  color: red;
+}
+
+.no-results-text {
+  padding: 20px;
+  color: #999;
+}
